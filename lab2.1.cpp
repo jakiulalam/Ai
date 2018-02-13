@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 
-  string Vaccume_agent(string location,string status)
+  string Vaccume_agent(const string& location,const string& status)
 {
     if(status=="Dirty")
     {
@@ -25,15 +25,15 @@ using namespace std;
 }
  int main()
  {
-   int n,i;
+   int n;
 
      string location,status;
-     cout<<"enter how many times u want to see:"<<endl;
-     cin>>n;
-     for(i=1;i<=n;i++)
+     std::cout<<"enter how many times u want to see:"<<std::endl;
+     std::cin>>n;
+     for(auto i =1;i<=n;i++)
      {
-         cin>>location>>status;
-          cout<<Vaccume_agent(location,status)<<endl;
+         std::cin>>location>>status;
+         std::cout<<Vaccume_agent(location,status)<<std::endl;
 
      }
 
